@@ -1,0 +1,51 @@
+@startuml
+Class Vehiculo
+Class Auto 
+Class Moto
+Class CilindrajeCc
+Class Camioneta 
+Class CapacidadCarga
+Class NumeroPlaca
+Class Marca
+Class Modelo
+Class AñoFabricacion
+Class PrecioDia
+
+Moto --|> Vehiculo
+Auto --|> Vehiculo
+Camioneta --|> Vehiculo
+
+Vehiculo *-- NumeroPlaca
+Vehiculo *-- Marca
+Vehiculo *-- Modelo
+Vehiculo *-- AñoFabricacion
+Vehiculo *-- PrecioDia
+Camioneta *-- CapacidadCarga
+Moto *-- CilindrajeCc
+
+Class Clientes
+Class Id
+Class Nombre
+Class Dni
+Class NumeroTelefono
+
+Clientes *-- Id
+Clientes *-- Nombre
+Clientes *-- Dni
+Clientes *-- NumeroTelefono
+
+Clientes o-- Vehiculo
+Clientes o-- Alquiler
+
+
+Class Alquiler
+Class CodigoAlquiler
+Class FechaInicio
+Class FechaFin
+Class CostoTotal
+
+Alquiler *-- CodigoAlquiler
+Alquiler *-- FechaInicio
+Alquiler *-- FechaFin
+Alquiler *-- CostoTotal
+@enduml
